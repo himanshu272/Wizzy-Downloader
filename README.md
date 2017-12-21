@@ -17,8 +17,70 @@ You can view recently downloaded videos here.
 You can only avail all the features if you have registered.
 ![screenshot from 2017-06-17 23-18-38](https://user-images.githubusercontent.com/24290847/27255206-35de3d7a-5389-11e7-9a7a-2aed00eeb14d.png)
 ![screenshot from 2017-06-17 23-18-45](https://user-images.githubusercontent.com/24290847/27255207-35e2bc38-5389-11e7-94ef-5e2fbd7f3144.png)
-<br>
+
+### Installation Guide
+##### Installing and Setting up Git
+**Step-1**: Installing Git
+•For macOS:
+Install Xcode from the App Store this will automatically install git in your system.To check the version of git open the terminal and type "git --version".
+
+•For Ubuntu:
+Open the terminal and type the following commands:
+"sudo apt-get update"
+"sudo apt-get install git"
+
+•For Windows:
+1.Download git from the following URL: "https://git-scm.com/download/win"
+2.When you've successfully started the installer, you should see the Git Setup wizard screen. Follow the Next and Finish prompts to complete the installation.
+
+**Step-2**: Setup Git
+Open your terminal/command prompt and type the following commands:
+git config --global user.name "Emma Paris"
+git config --global user.email "eparis@atlassian.com"
+Replace the above username and email with your own username and email.
+
+**Step-3**: Cloning a git repository
+1.Go to the repository you want to clone and click on fork.
+2.Then click on "Clone or Download".Copy the URL on your clipboard.
+3.Open terminal/command prompt and type "git clone (and paste the URL)".
+4.Use "cd (name of the repository" command to go to that repository in your system.
+5.To check the items inside the repository use "ls" command.
+
+##### Installing and Running Django
+**Step-1**: Download Python
+To download python just go to this url : https://www.python.org/download/
+
+**Step-2**: pip
+pip is already installed if you are using Python 2>=2.7.9 or Python 3>=3.4. To upgrade pip:
+• On Linux or macOS:
+Open terminal and then type "pip install -U pip".
+
+• On Windows:
+Open the command prompt and type "python -m pip install -U pip".
+Here pip is a package manager that will help us to install opensource softwares.
+
+**Step-3**: Virtual Environment
+Type "sudo pip install virtualenv". This command will install virtual environment on your system. Virtual environment is very useful when it comes to use a software which involves constantly updating and its easy to upgrade Django from the virtual environment.
+
+**Step-4**: Activate virtualenv
+• On Linux or macOS:
+1.Create a virtual environment folder on your desktop.
+2.On your terminal, use "cd" command to go to the Desktop directory.
+3.Then type "virtualenv hello"(I put hello, you can put any name you want, this will be the name of your folder).
+4.To activate virtual machine, go inside that folder, type cd hello.Once you are inside that folder type "source bin/activate"(this will activate the virtualenv).
+
+• On Windows:
+1.Type "mkvirtualenv myproject".The virtual environment will be activated automatically and you'll see "(myproject)" next to the command prompt to designate that.If you start a new command prompt, you'll need to activate the environment again using: "workon myproject".
+
+**Step-5**: Installing Django
+All possible options to install can be found in this website : https://www.djangoproject.com/download/
+Type "sudo pip install Django". This installs Django distribution on your virtual environment.
+
+**Step-6**: Running the Django project
+Type "python manage.py runserver" to run the project.
+
 And Thats about all you would need to know to get you started.Cheers!!
+
 ### Technologies Used : 
 1.Web Framework : Django<br>
 2.Front-end : Bootstrap , jQuery
