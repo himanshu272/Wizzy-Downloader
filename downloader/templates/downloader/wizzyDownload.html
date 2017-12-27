@@ -31,14 +31,15 @@ $(document).ready(function(){
 	$("#CheckBtn").on("click",function(){
 		var dn_str = $("#downloadField").val();
 		console.log(dn_str);
-		var re = /https:\/\/www\.youtube\.com\/watch\?v=/;
+		var re = /(youtu\.be\/|youtube\.com\/(watch\?(.*&)?v=|(embed|v)\/))([^\?&"'>]+)/;
 		var bool = re.test(dn_str);
 		if(bool){
 			$(".videoDiv").css("opacity","1.0");
 			$(".infoDiv").css("opacity","1.0");
 			var ifr_str = "https://www.youtube.com/embed/";
-			ifr_str += dn_str.substring(dn_str.indexOf("?")+3);
-			console.log(ifr_str); 
+			var match = re.exec(dn_str);
+			ifr_str += match[5];
+			console.log(ifr_str);
 			var str_html="<div class='embed-responsive embed-responsive-4by3'><iframe class='embed-responsive-item' src='"+ifr_str+"'></iframe></div>";
 			$.ajax({
 				url: "https://crossorigin.me/"+dn_str,
