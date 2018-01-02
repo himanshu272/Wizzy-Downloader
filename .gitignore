@@ -6,3 +6,7 @@ local_settings.py
 
 .env
 db.sqlite3
+bin/
+lib/
+pip-selfcheck.json
+local/
