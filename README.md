@@ -72,11 +72,25 @@ Type "sudo pip install virtualenv". This command will install virtual environmen
 • On Windows:
 1.Type "mkvirtualenv myproject".The virtual environment will be activated automatically and you'll see "(myproject)" next to the command prompt to designate that.If you start a new command prompt, you'll need to activate the environment again using: "workon myproject".
 
-**Step-5**: Installing Django
+**Step-5**: Installing Django and pytube
 All possible options to install can be found in this website : https://www.djangoproject.com/download/
 Type "sudo pip install Django". This installs Django distribution on your virtual environment.
 
-**Step-6**: Running the Django project
+If you face error like-
+```
+    AttributeError: 'module' object has no attribute 'lru_cache'
+```
+Then you should install previous version of Django using
+`pip install django==1.11`
+
+Secondly install pytube by
+```
+pip install pytube
+```
+
+**Step-6**: Copy the project to the folder in which you have enabled virtual environment.
+
+**Step-7**: Running the Django project
 Type "python manage.py runserver" to run the project.
 
 And Thats about all you would need to know to get you started.Cheers!!
@@ -84,11 +98,4 @@ And Thats about all you would need to know to get you started.Cheers!!
 ### Technologies Used : 
 1.Web Framework : Django<br>
 2.Front-end : Bootstrap , jQuery
-
-
-
-
-
-
-
 
