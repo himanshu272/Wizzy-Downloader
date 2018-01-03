@@ -41,22 +41,22 @@ $(document).ready(function(){
 			ifr_str += match[5];
 			console.log(ifr_str);
 			var str_html="<div class='embed-responsive embed-responsive-4by3'><iframe class='embed-responsive-item' src='"+ifr_str+"'></iframe></div>";
-			$.ajax({
-				url: "https://crossorigin.me/"+dn_str,
-     			dataType: 'html',
-     			//type : "post",
-     			success: function(data) {
-			     		var title = $(data).find("#eow-title").text();
-			     		$(".infoDiv").html("<p class='info'><strong>"+title+"<br><p>Click on download to download the best quality mp4</strong></p></p>");
-			    }
+			$.getJSON('https://noembed.com/embed',
+			{
+    			format: 'json',
+    			url: dn_str
+			},
+			 function (data) {
+    			var title = data.title;
+    			var author = data.author_name;
+    			$(".infoDiv").html("<p class='info'><strong>"+title+"<br><p>Uploader: "+author+"</p><p><em>Click on download to download the best quality mp4</em></strong></p></p>");
 			});
 			$(".videoDiv").html("");
 			$(".error").html("");
 			$(".videoDiv").html(str_html);
 		}else{
 			$(".error").html("<strong>Please enter a valid url</strong>");
-		}	
-		//console.log(bool);
+		}
 	});
 });
 </script>
