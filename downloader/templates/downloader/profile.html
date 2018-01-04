@@ -1,28 +1,34 @@
 {% extends 'downloader/base.html' %}
 {% block title %}Profile:{{user.username}}{% endblock %}
 {% block content %}
+<style>
+.tutor-block { background-color: #1a1a1a; padding: 30px; }
+.tutor-content { text-align: center; }
+.tutor-title { margin-bottom: 5px; font-size:24px;text-transform: uppercase;color:#337ab7}
+.tutor-designation { color: #ff3c2e; display: block; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; font-size: 12px; }
+.tutor-img img { width: 100%; margin-bottom: 30px; }
+.mb60{margin-bottom:60px;}
+.mt30{margin-top:30px;}
+</style>
 <div class="row">
-	<div class="container-fluid">
-		<div class="col-xs-12 col-md-12 photo">
-			<br>
-			<center>
-				<div class="photo-div">
-					<img src="http://i.imgur.com/8ka8RPi.png" class="img img-responsive" style="width:100%;height:100%;"/>
-				</div>
-			</center>
-			<br>
-			<center>
-				<div class="information">
-					<span class="profileText">Username : <i>{{user.username}}</i></span>
-					<br>
-					<span class="profileText">Email : <i>{{user.email}}</i></span>	
-				</div>
-			</center>
-		</div>
-	</div>
-</div>
-<h2 class="allheads">Previous Downloads</h2>
-<table class="table table-striped">
+	 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb30">
+                    <div class="tutor-block">
+                        <div class="tutor-img">
+                            <img src="http://i.imgur.com/8ka8RPi.png" class="img img-responsive" style="width:100%;height:100%;"/>
+                        </div>
+                        <div class="tutor-content">
+                            <h5 class="tutor-title">{{user.username}}</h5>
+                            <span class="tutor-designation">{{user.email}}</span>
+                            <!--<p>Quisque malesuada nullanec mivarius efficitur. stibulum sollicitudin tortor vellorem.</p>-->
+                        </div>
+                    </div>
+                    <div class="social-media">
+                        
+                    </div>
+     </div>
+	<div class="col-lg-8 col-md-8 col-sm-6 col-xs-12 mb30">
+		<div class="tutor-block">
+		<table class="table table-striped">
 	<thead>
 		<th>Previous Downloads</th>
 		<th>Linked Video</th>
@@ -46,4 +52,8 @@
 	</tr>
 	{% endfor %}
 </table>
+		</div>
+	</div>
+</div>
+
 {% endblock %}
