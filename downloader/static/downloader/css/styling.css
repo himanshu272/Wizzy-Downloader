@@ -130,3 +130,11 @@ td,th{
 	font-size:140%;
 	color:white;
 }
+.tutor-block { background-color: #1a1a1a; padding: 30px; }
+.tutor-content { text-align: center; }
+.tutor-title { margin-bottom: 5px; font-size:24px;text-transform: uppercase;color:#337ab7}
+.tutor-designation { color: #ff3c2e; display: block; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; font-size: 12px; }
+.tutor-img img { width: 100%; margin-bottom: 30px; }
+.mb60{margin-bottom:60px;}
+.mt30{margin-top:30px;}
+.link-vid{width:40%;margin-right:5px;}

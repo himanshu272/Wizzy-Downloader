@@ -1,15 +1,6 @@
 {% extends 'downloader/base.html' %}
 {% block title %}Profile:{{user.username}}{% endblock %}
 {% block content %}
-<style>
-.tutor-block { background-color: #1a1a1a; padding: 30px; }
-.tutor-content { text-align: center; }
-.tutor-title { margin-bottom: 5px; font-size:24px;text-transform: uppercase;color:#337ab7}
-.tutor-designation { color: #ff3c2e; display: block; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; font-size: 12px; }
-.tutor-img img { width: 100%; margin-bottom: 30px; }
-.mb60{margin-bottom:60px;}
-.mt30{margin-top:30px;}
-</style>
 <div class="row">
 	 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb30">
                     <div class="tutor-block">
@@ -19,7 +10,6 @@
                         <div class="tutor-content">
                             <h5 class="tutor-title">{{user.username}}</h5>
                             <span class="tutor-designation">{{user.email}}</span>
-                            <!--<p>Quisque malesuada nullanec mivarius efficitur. stibulum sollicitudin tortor vellorem.</p>-->
                         </div>
                     </div>
                     <div class="social-media">
@@ -35,7 +25,7 @@
 		<th>Date of Download</th>
 	</thead>
 	{% for video in all_video|slice:':6' %}
-	<tr>
+	<tr class="profile-table-row">
 		<td class="link-vid"><a href="{{ video.video }}" target="_blank">{{ video.video }}</a></td>
 		<td class="vid">
 			<div class="row">
